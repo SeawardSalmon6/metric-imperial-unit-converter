@@ -1,0 +1,120 @@
+/* ====== Standard Variables */
+:root {
+    --bg-primary: #585DFE;
+    --bg-secondary: #FB3796;
+    --bg-results: #1F2937;
+    font-size: 16px;
+}
+
+/* ====== CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: content-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* ====== Hidden Spinner on Input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* --> Hide on Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ====== Document Standards */
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 320px;
+    height: 100vh;
+    background: white;
+    color: black;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== Common Styles for Both Sections */
+section {
+    position: relative;
+    padding: 3.125rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ====== Styles for the First Section (input) */
+.input-section {
+    flex: none;
+    background: linear-gradient(-145deg, var(--bg-primary), var(--bg-secondary));
+    font-weight: 800;
+    color: white;
+}
+
+.input-section h1 {
+    font-size: 22px;
+}
+
+.input-section #input-el {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 800;
+    font-size: 6.125rem;
+    line-height: 26px;
+    color: white;
+    background: transparent;
+    outline: none;
+}
+
+.input-section .popup {
+    position: absolute;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.input-section .popup.active {
+    inset: 0;
+    margin: auto auto 1rem;
+    max-width: 30%;
+    width: max-content;
+    height: max-content;
+    padding: 0.5rem;
+    font-size: 12px;
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+/* ====== Styles for the Second Section (conversions) */
+.results-section {
+    flex: auto;
+    background: var(--bg-results);
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.results-section .result-block:not(:last-child) {
+    margin-bottom: 1.75rem;
+}
+
+.results-section .result-block h3 {
+    font-weight: 600;
+    margin-bottom: .5rem;
+}

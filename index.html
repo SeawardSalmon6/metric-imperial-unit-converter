@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+        <link rel="shortcut icon" href="https://icon-library.com/images/unit-icon/unit-icon-27.jpg" />
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="index.css">
+        <title>Metric/Imperial Unit Converter</title>
+    </head>
+    <body>
+        <div class="container">
+            <section class="input-section">
+                <h1>Metric/Imperial unit conversion</h1>
+                <input id="input-el" type="number" step="0.1" min="0" value="0" />
+                <div class="popup">Input a value to convert</div>
+            </section>
+            <section class="results-section">
+                <div class="result-block">
+                    <h3>Length (Meters/Feet)</h3>
+                    <span id="length-el"></span>
+                </div>
+                <div class="result-block">
+                    <h3>Volume (Liters/Gallons)</h3>
+                    <span id="volume-el"></span>
+                </div>
+                <div class="result-block">
+                    <h3>Mass (Kilograms/Pounds)</h3>
+                    <span id="mass-el"></span>
+                </div>
+            </section>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
